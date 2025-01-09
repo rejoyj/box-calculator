@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5 Ply Box Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+        <img src="./asset/deepambox.com Logo.jpg" alt="deepambox Logo" style="height: 20px;">
+    </div>
+    
+    <h1>5 Ply Box Price Calculator</h1>
+    <form id="calculator-form">
+      <!-- Inputs -->
+<!-- Length, Breadth, Height -->
+<div class="form-row">
+    <div class="input-group">
+      <label for="length">Length (L):</label>
+      <input type="number" id="length" required>
+    </div>
+    <div class="input-group">
+      <label for="breadth">Breadth (B):</label>
+      <input type="number" id="breadth" required>
+    </div>
+    <div class="input-group">
+      <label for="height">Height (H):</label>
+      <input type="number" id="height" required>
+    </div>
+  </div>
+
+
+<!-- Material Price and Labour Cost -->
+<div class="form-row">
+    <div class="input-group">
+      <label for="material-price">Material Price:</label>
+      <input type="number" id="material-price" value="33" required>
+    </div>
+    <div class="input-group">
+      <label for="labour-cost">Labour Cost:</label>
+      <input type="number" id="labour-cost" value="13" required>
+    </div>
+    <div class="input-group">
+      <label for="profit-margin">Profit Margin (%):</label>
+      <input type="number" id="profit-margin" value="20" required>
+    </div>
+  </div>
+
+<!-- Ply and Flute Inputs -->
+<div class="form-row">
+    <div class="input-group">
+      <label for="ply1">Ply (1):</label>
+      <input type="number" id="ply1" value="0.120" step="0.001" required>
+    </div>
+    <div class="input-group">
+      <label for="ply2">Ply (2):</label>
+      <input type="number" id="ply2" value="0.120" step="0.001" required>
+    </div>
+    <div class="input-group">
+      <label for="ply3">Ply (3):</label>
+      <input type="number" id="ply3" value="0.120" step="0.001" required>
+    </div>
+    <div class="input-group">
+      <label for="ply4">Ply (4):</label>
+      <input type="number" id="ply4" value="0.120" step="0.001" required>
+    </div>
+    <div class="input-group">
+      <label for="ply5">Ply (5):</label>
+      <input type="number" id="ply5" value="0.120" step="0.001" required>
+    </div>
+    <div class="input-group">
+      <label for="flute">Flute:</label>
+      <input type="number" id="flute" value="0.120" step="0.001" required>
+    </div>
+  </div>
+
+
+      <!-- Button -->
+      <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+    <!-- Output -->
+    <div id="output">
+      <h3>Results:</h3>
+      <p>Reel Size: <span id="reel-size"></span></p>
+      <p>Cutting Size: <span id="cutting-size"></span></p>
+      <p>GSM: <span id="gsm"></span></p>
+      <p>Weight (+5%): <span id="weight"></span></p>
+      <p>Processing Fee: <span id="processing-fee"></span></p>
+      <p>Purchase Rate: <span id="purchase-rate"></span></p>
+      <p>Sale Price: <span id="sale-price"></span></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
